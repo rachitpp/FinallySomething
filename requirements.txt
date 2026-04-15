@@ -6,13 +6,36 @@ mistralai>=0.1.0
 
 # --- LangChain Ecosystem ---
 langchain>=0.1.0
+langchain-core>=0.1.0
 langchain-community>=0.0.30
 langchain-openai>=0.0.8
+langchain-mistralai>=0.1.0
+langchain-huggingface>=0.0.3
+langchain-google-genai>=1.0.0
+
+# --- Hugging Face ---
+huggingface-hub>=0.20.0
+transformers>=4.40.0
+sentence-transformers>=2.7.0
 
 # --- Utilities ---
 python-dotenv>=1.0.0
 tiktoken>=0.5.0
 requests>=2.31.0
+
+# --- RAG: Vector Stores ---
+chromadb>=0.4.0
+faiss-cpu>=1.7.4
+langchain-chroma>=0.1.0
+
+# --- RAG: Document Loaders ---
+pypdf>=4.0.0
+python-docx>=1.1.0
+beautifulsoup4>=4.12.0
+unstructured>=0.13.0
+
+# --- RAG: Text Splitting ---
+langchain-text-splitters>=0.0.1
 
 # --- Optional (for APIs / apps) ---
 fastapi>=0.110.0

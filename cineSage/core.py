@@ -5,6 +5,8 @@ load_dotenv()
 from pydantic import BaseModel
 from typing import List,Optional
 from langchain_core.output_parsers import PydanticOutputParser
+from langchain_mistralai import ChatMistralAI
+from langchain_core.prompts import ChatPromptTemplate
 
 class Movie(BaseModel):
     title: str
@@ -17,9 +19,7 @@ class Movie(BaseModel):
 
 parser = PydanticOutputParser(pydantic_object = Movie)
 
-from langchain_mistralai import ChatMistralAI
 
-from langchain_core.prompts import ChatPromptTemplate
 model = ChatMistralAI(model = 'mistral-small-latest')
 
 prompt = ChatPromptTemplate.from_messages([
