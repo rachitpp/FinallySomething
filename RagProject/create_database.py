@@ -3,6 +3,8 @@
 # Steps: Load PDF → Split into chunks → Embed → Store in DB
 # =============================================================
 
+  
+
 
 # --- Environment Setup ---
 from dotenv import load_dotenv
@@ -17,14 +19,14 @@ from langchain_chroma import Chroma
 
 
 # --- Step 1: Load PDF ---
-PdfLoader = PyPDFLoader("exercise_science_research_paper.pdf")
+PdfLoader = PyPDFLoader("MachineLearning.pdf")
 
 pdfDocuments = PdfLoader.load()
 
 
 # --- Step 2: Split into Chunks ---
-RecursiveSplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=20)
-
+RecursiveSplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+     
 chunks = RecursiveSplitter.split_documents(pdfDocuments)
 
 
